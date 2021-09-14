@@ -1,22 +1,3 @@
-/* CSS => Cascading StyleSheet(Folha de estilo em cascata)
-
-Estrutura
-
-Regra CSS:
-seletor {
-    propriedade: valor; -> declaração
-}
-
-CSS BEM
-
-B -> Bloco
-E -> Elemento
-M -> Modificador
-
-font-family: 'Roboto', sans-serif;
-
-*/
-
 /* BODY */
 body{
     font-family: 'Roboto', sans-serif;
@@ -24,7 +5,7 @@ body{
 
 .container{
     width: 100%;
-    max-width: 900px;
+    max-width: 64%;
     margin: 0 auto;
     display: flex;
 
@@ -40,46 +21,54 @@ body{
 
 /* CABEÇALHO */
 .cabecalho{
-    flex-basis: 30%;
+    flex-basis: 20%; /* specifies the initial length of a flexible item*/
 }
 .cabecalho__logo{
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 30px;
 }
-.cabecalho__logo img{}
+.cabecalho__logo img{
+    width: 11.5%;
+    height: 11.5%;
+}
 .cabecalho__logo figcaption{
     display: none;
 }
-
 .cabecalho__menuNavegacao{}
 .cabecalho__menuLista{}
 .cabecalho__menuItem{
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 .cabecalho__menuItem img{
+    margin-right: 10px;
     max-width: 26px;
 }
 .cabecalho__menuItem a{
     color: #000;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 18px;
     vertical-align: top;
+}
+.cabecalho__menuItemNegrito{
+    font-weight: bold;
 }
 
 
 /* CONTEÚDO PRINCIPAL */
 .conteudoPrincipal{
-    flex-basis: 70%;
+    flex-basis: 49%;
     border-left: 1px solid #e7ecf0;
     border-right: 1px solid #e7ecf0;
 }
 .conteudoPrincipal__titulo{
-    padding: 10px 30px;
+    padding: 15px 15px; /* top and bottom padding are 15px, right and left paddings are 30px */
+    font-size: 19px;
+    font-weight: bold; /* deixar em negrito */
 }
-
 .conteudoPrincipal__formulario{
     padding: 10px 30px;
     border-top: 1px solid #e7ecf0;
-    border-bottom: 10px solid #e7ecf0;
+    border-bottom: 1px solid #e7ecf0;
     text-align: right;
 }
 .conteudoPrincipal__formulario textarea{
@@ -88,6 +77,7 @@ body{
     border: none;
     outline: none;
     resize: none;
+    font-size: 20px;
     height: 55px;
 }
 .conteudoPrincipal__formulario button{
@@ -97,7 +87,6 @@ body{
     color: #fff;
     border-radius: 20px;
 }
-
 .conteudoPrincipal__feed{}
 .conteudoPrincipal__listaTweets{
     display: flex;
@@ -109,7 +98,6 @@ body{
     align-items: flex-start;
     border-bottom: 1px solid #e7ecf0;
 }
-
 .tweet__fotoPerfil{}
 .tweet__conteudo{
     margin-left: 15px;
@@ -124,4 +112,44 @@ body{
 .tweet__conteudo p{
     margin-top: 15px;
     color: #333333;
+}
+
+
+
+/* CONTEÚDO PRINCIPAL */
+
+.conteudoSecundario{
+    margin-left: 30px;
+}
+
+.conteudoSecundario__Busca{
+    padding-left:10px;
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    margin-top: 5px;
+    background: #f6f6f6;
+}
+.conteudoSecundario__formulario{}
+.conteudoSecundario__formulario textarea{}
+.conteudoSecundario__Noticias{
+    padding: 15px 40px 600px 10px; /* top right bottom left */
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    margin-top: 15px;
+    background: #f6f6f6;
+}
+.conteudoSecundario__Noticias h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+.conteudoSecundario__Sugestoes{
+    padding: 15px 40px 300px 10px; /* top right bottom left */
+    border-top: 1px solid #f6f6f6;
+    border-bottom: 1px solid #f6f6f6;
+    margin-top: 10px;
+    background: #f6f6f6;
+}
+.conteudoSecundario__Sugestoes h1{
+    font-size: 20px;
+    font-weight: bold;
 }
